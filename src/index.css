@@ -1,0 +1,325 @@
+/* ==========================================================================
+   AURASTYLE: AI FACE SHAPE & HAIRSTYLE ADVISOR
+   Minimalist Luxury Salon & Grooming Studio Design System
+   ========================================================================== */
+
+:root {
+  /* Slate & Charcoal Deep Palette */
+  --bg-app: #0A0C10;
+  --bg-surface: #11141B;
+  --bg-card: rgba(20, 24, 33, 0.85);
+  --bg-card-hover: rgba(26, 31, 43, 0.95);
+  --bg-glass: rgba(17, 20, 28, 0.75);
+  --bg-input: #151922;
+
+  /* Warm Sand & Neutral Beige Accents */
+  --sand-50: #FAF7F2;
+  --sand-100: #F3ECE2;
+  --sand-200: #E6D8C5;
+  --sand-300: #D8C3A8;
+  --sand-primary: #DECBB3;
+  --sand-gold: #CDB391;
+  --sand-accent: #BFA17A;
+  --sand-gradient: linear-gradient(135deg, #F3ECE2 0%, #DECBB3 50%, #B89972 100%);
+  --sand-glow: 0 0 25px rgba(222, 203, 179, 0.2);
+
+  /* Status & Accents */
+  --match-best: #10B981;
+  --match-best-bg: rgba(16, 185, 129, 0.12);
+  --match-ideal: #38BDF8;
+  --match-ideal-bg: rgba(56, 189, 248, 0.12);
+  --match-great: #A855F7;
+  --match-great-bg: rgba(168, 85, 247, 0.12);
+  --match-avoid: #F87171;
+  --match-avoid-bg: rgba(248, 113, 113, 0.12);
+
+  /* Text & Typography */
+  --text-main: #FFFFFF;
+  --text-muted: #9EABB9;
+  --text-dim: #606A78;
+  --text-sand: #E6D8C5;
+
+  /* Borders & Shadows */
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-sand: rgba(222, 203, 179, 0.28);
+  --border-sand-glow: rgba(222, 203, 179, 0.55);
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.35);
+  --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 20px 50px rgba(0, 0, 0, 0.7);
+
+  /* Radii */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --radius-full: 9999px;
+
+  /* Fonts */
+  --font-editorial: 'Cormorant Garamond', Georgia, serif;
+  --font-display: 'Outfit', sans-serif;
+  --font-sans: 'Plus Jakarta Sans', sans-serif;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  min-height: 100%;
+  background-color: var(--bg-app);
+  color: var(--text-main);
+  font-family: var(--font-sans);
+  font-size: 15px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-app);
+}
+::-webkit-scrollbar-thumb {
+  background: #252B3A;
+  border-radius: var(--radius-full);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--sand-gold);
+}
+
+/* Typography Helpers */
+h1, h2, h3, h4, .font-editorial {
+  font-family: var(--font-editorial);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.text-sand-gradient {
+  background: var(--sand-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Luxury Cards */
+.aura-card {
+  background: var(--bg-card);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.aura-card:hover {
+  border-color: rgba(222, 203, 179, 0.35);
+  box-shadow: var(--shadow-md);
+}
+
+.aura-card-gold-border {
+  border-color: var(--border-sand);
+  background: linear-gradient(180deg, rgba(25, 30, 42, 0.9) 0%, rgba(18, 22, 31, 0.95) 100%);
+}
+
+.aura-card-gold-border:hover {
+  border-color: var(--sand-primary);
+  box-shadow: 0 10px 30px rgba(222, 203, 179, 0.16);
+}
+
+/* Buttons */
+.btn-sand {
+  background: var(--sand-gradient);
+  color: #0B0D11;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 13.5px;
+  letter-spacing: 0.02em;
+  padding: 11px 22px;
+  border-radius: var(--radius-md);
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 16px rgba(222, 203, 179, 0.25);
+  text-decoration: none;
+}
+
+.btn-sand:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(222, 203, 179, 0.4);
+  filter: brightness(1.05);
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.05);
+  color: #FFFFFF;
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 13.5px;
+  padding: 10px 18px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-subtle);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--text-muted);
+  border: none;
+  padding: 8px 14px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  transition: all 0.2s ease;
+}
+
+.btn-ghost:hover {
+  color: var(--sand-200);
+  background: rgba(222, 203, 179, 0.08);
+}
+
+/* Status Badges */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+}
+
+.badge-best {
+  background: var(--match-best-bg);
+  color: var(--match-best);
+  border: 1px solid rgba(16, 185, 129, 0.35);
+}
+
+.badge-ideal {
+  background: var(--match-ideal-bg);
+  color: var(--match-ideal);
+  border: 1px solid rgba(56, 189, 248, 0.35);
+}
+
+.badge-great {
+  background: var(--match-great-bg);
+  color: var(--match-great);
+  border: 1px solid rgba(168, 85, 247, 0.35);
+}
+
+.badge-sand {
+  background: rgba(222, 203, 179, 0.12);
+  color: var(--sand-primary);
+  border: 1px solid var(--border-sand);
+}
+
+/* Biometric Scanner Animations */
+@keyframes scanLaser {
+  0% {
+    top: 5%;
+    opacity: 0.2;
+  }
+  50% {
+    top: 90%;
+    opacity: 0.9;
+  }
+  100% {
+    top: 5%;
+    opacity: 0.2;
+  }
+}
+
+.scan-line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent 0%, #DECBB3 50%, transparent 100%);
+  box-shadow: 0 0 14px #DECBB3;
+  animation: scanLaser 3.5s infinite ease-in-out;
+  pointer-events: none;
+  z-index: 10;
+}
+
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.6; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.15); }
+}
+
+.pulse-node {
+  animation: pulseGlow 2s infinite ease-in-out;
+}
+
+/* Modals */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(8, 10, 14, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.modal-content {
+  background: #141722;
+  border: 1px solid var(--border-sand);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg), 0 0 45px rgba(222, 203, 179, 0.15);
+  max-width: 720px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  animation: modalPop 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes modalPop {
+  from { opacity: 0; transform: scale(0.95) translateY(10px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+/* Responsive grid */
+.grid-styles {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+  gap: 24px;
+}
+
+@media (max-width: 640px) {
+  .grid-styles {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
