@@ -3,7 +3,7 @@ title Push AuraStyle to GitHub
 cd /d "%~dp0"
 echo ===================================================
 echo   Pushing AuraStyle to GitHub Repository:
-echo   https://github.com/sanvinsijo-spec/saloon-project.git
+echo   https://github.com/sanvinsijo-spec/project-.git
 echo ===================================================
 echo.
 git push -u origin main

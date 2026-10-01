@@ -40,8 +40,8 @@
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/sanvinsijo-spec/saloon-project.git
-   cd saloon-project
+   git clone https://github.com/sanvinsijo-spec/project-.git
+   cd project-
    ```
 
 2. **Install dependencies**:
